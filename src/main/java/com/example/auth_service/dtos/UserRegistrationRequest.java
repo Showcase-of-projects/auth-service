@@ -1,17 +1,18 @@
 package com.example.auth_service.dtos;
 
-public class UserDTO {
-    private String login;
-    private String password;
+public class UserRegistrationRequest {
+    private Long id;
     private String name;
     private String surname;
     private String patronymic;
     private String group;
     private String role;
 
-    public UserDTO(String login, String password, String name, String surname, String patronymic, String group, String role) {
-        this.login = login;
-        this.password = password;
+    public UserRegistrationRequest() {
+    }
+
+    public UserRegistrationRequest(Long id, String name, String surname, String patronymic, String group, String role) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
@@ -19,23 +20,12 @@ public class UserDTO {
         this.role = role;
     }
 
-    public UserDTO() {
+    public Long getId() {
+        return id;
     }
 
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

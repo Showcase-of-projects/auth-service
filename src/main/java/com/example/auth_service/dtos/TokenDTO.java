@@ -1,5 +1,8 @@
 package com.example.auth_service.dtos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class TokenDTO {
     private String token;
     private String refreshToken;
